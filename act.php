@@ -3,7 +3,7 @@ session_start();
 $connect = mysql_connect('localhost','username','password');
 if(!mysql_select_db('cheapousers'))
 {
-        die('Failure selecting Database'. mysql_error());
+        die('Failure in selecting Database'. mysql_error());
 }
 
 
@@ -29,7 +29,7 @@ if($_GET['a'] == 'login')
                                         $_SESSION['Name'] = $row['firstname'].' '.$row['lastname']; 
                                         $_SESSION['ID'] = $row['id'];
                                         $_SESSION['Username'] = $row['username'];
-                                        echo ('Login Successful');
+                                        echo ('Login was Successful');
                                         echo('<script>location.replace("msg_box.php")</script>');
                                 }
                         }
@@ -63,7 +63,7 @@ else if ($_GET['a'] == 'register')
         }
         else
         {
-                echo"<script>alert('Registration complete')</script>";
+                echo"<script>alert('Registration is complete')</script>";
                 echo "<script>location.replace('reg.php')</script>";
         }
 }
@@ -104,25 +104,10 @@ elseif($_GET['a'] == 'getmessage')
 elseif($_GET['a']=='messagecompose')
 {
         header('Access-Control-Allow-Origin: *');
-
-        /*$send_message_string = "INSERT INTO message
-                                       (
-                                               body,
-                                               subject,
-                                               user_id,
-                                               recipient_id
-                                       )
-                                       VALUES
-                                       (
-                                               '$_REQUEST[]',
-                                               '$_REQUEST[]',
-                                               '$_REQUEST[]',
-                                               '$_REQUEST[]'
-                                       )"*/
 }
 else if(!isset($_GET['a']))
 {
-        echo '<script>alert("Error occured \nReturning you to the Message Board")</script>';
+        echo '<script>alert("Error occured \nReverting to the Message Box")</script>';
         echo '<script>location.replace("msg_box.php")</script>';
 }
 ?>
