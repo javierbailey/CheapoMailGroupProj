@@ -1,11 +1,11 @@
-window.onload = preload;
+window.onload = pageLoad;
 
-function preload()
+function pageLoad()
 {
-        document.getElementById('cancel').onclick = messageboardredirect;
+        document.getElementById('cancel').onclick = messagebox;
 }
 
-function messageboardredirect()
+function messagebox()
 {
         location.replace('msg_box.php');
 }
