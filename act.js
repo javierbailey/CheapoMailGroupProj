@@ -1,8 +1,8 @@
 'use strict';
 
-window.onload = preload;
+window.onload = pageLoad;
 
-function preload()
+function pageLoad
 {
         
 }
