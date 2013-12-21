@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect = mysql_connect('localhost','admin','admin123');
+$connect = mysql_connect('localhost','username','password');
 if(!mysql_select_db('cheapousers'))
 {
         die('Failure selecting Database'. mysql_error());
