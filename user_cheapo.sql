@@ -3,7 +3,6 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 07, 2013 at 01:28 PM
 -- Server version: 5.6.11-log
 -- PHP Version: 5.3.25
 
@@ -14,39 +13,39 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8 */; 
 
 --
--- Database: `cheapousers`
+-- Database: `cheapo_users`
 --
-CREATE DATABASE IF NOT EXISTS `cheapousers` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `cheapousers`;
+CREATE DATABASE IF NOT EXISTS `cheapo_users` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `cheapo_users`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `message`
+-- Table structure for `message` table
 --
 
 CREATE TABLE IF NOT EXISTS `message` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `body` varchar(200) NOT NULL,
-  `subject` varchar(100) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `recipient_id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `body` varchar(250) NOT NULL,
+  `subject` varchar(50) NOT NULL,
+  `user_id` int(10) NOT NULL,
+  `recipient_id` int(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `message_read`
+-- Table structure for `message_read` table 
 --
 
 CREATE TABLE IF NOT EXISTS `message_read` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `message_id` int(11) NOT NULL,
-  `reader_id` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `message_id` int(10) NOT NULL,
+  `reader_id` int(10) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -54,18 +53,15 @@ CREATE TABLE IF NOT EXISTS `message_read` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for `users` table
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(40) NOT NULL DEFAULT '''''',
-  `lastname` varchar(40) NOT NULL DEFAULT '''''',
-  `pword` varchar(30) NOT NULL,
-  `username` varchar(50) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(30) NOT NULL DEFAULT '''''',
+  `lastname` varchar(30) NOT NULL DEFAULT '''''',
+  `pswd` varchar(25) NOT NULL,
+  `username` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
