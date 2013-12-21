@@ -40,7 +40,7 @@ function compose()
         compose_body.rows  ='5';
         compose_body.cols = '50';
         compose_body.style.position = 'absolute';
-        compose_body.style.left = '0px'
+        compose_body.style.left = '1px'
 
 
         var compose_form = document.createElement('form')
