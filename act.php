@@ -103,7 +103,7 @@ elseif($_GET['a'] == 'getmessage')
 }
 elseif($_GET['a']=='messagecompose')
 {
-        header('Access-Control-Allow-Origin: *');
+        header('Allow-Origin: *');
 }
 else if(!isset($_GET['a']))
 {
