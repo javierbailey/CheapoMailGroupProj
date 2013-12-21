@@ -4,7 +4,7 @@
                 <?php session_start() ?>
                 <title>Cheapo Mail || <?php echo $_SESSION['Name'] ;?></title>
                 <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
-                <script src=register.js></script>
+                <script src=reg.js></script>
                  <link rel="stylesheet" type="text/css" href="msg_box.css" />
 
         </head>
