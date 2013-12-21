@@ -2,7 +2,7 @@
 <html >
         <?php session_start();?>
         <head>
-                <title> Cheapo Mail |
+                <title> CheapoMail |
                 <?php        echo $_SESSION['Name'];?> 
                 </title>
                 <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
